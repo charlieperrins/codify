@@ -1,23 +1,15 @@
-ci_builder
+codify
 ==========
 
-Tinkering with a build script to set up new CodeIgniter / HTML5 Bolierplate apps
+Bash script to automate setup of new CodeIgniter/HTML5 Boilerplate applications.
 
-DIR=$1
+Downloads most recent CI and Boilerplate files and sets them up in a new application directory - name supplied by user as an argument.
 
-curl -O http://codeigniter.com/download_files/reactor/CodeIgniter_2.1.3.zip
-curl -LO https://github.com/h5bp/html5-boilerplate/archive/master.zip
+Usage
+==========
 
-unzip master.zip
-unzip CodeIgniter_2.1.3.zip
+Call script file, supply name of new directory:
 
-mv CodeIgniter_2.1.3 $DIR
-cp -r html5-boilerplate-master/* $DIR
+>: sh codiy.sh my_app_name
 
-rm CodeIgniter_2.1.3.zip
-rm master.zip
-rm -r html5-boilerplate-master
 
-cd $DIR
-
-mv index.html application/views/welcome_message.php
