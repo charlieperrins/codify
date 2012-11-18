@@ -1,5 +1,10 @@
-# Look for directory name as argument
-DIR=$1
+# Look for directory name as argument or use default
+if [ -z "$1" ]
+	then
+		DIR="NEW_APPLICATION_DIR"
+	else
+		DIR=$1
+fi		
 
 # Find out most recent version of CI and set download path
 CI_VERSION="`curl http://versions.ellislab.com/codeigniter_version.txt`"
