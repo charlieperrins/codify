@@ -10,6 +10,6 @@ Usage
 
 Call script file, supply name of new directory:
 
->: sh codiy.sh my_app_name
+>: sh codify.sh my_app_name
 
 
